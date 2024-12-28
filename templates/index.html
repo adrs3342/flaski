@@ -1,20 +1,19 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Gallery</title>
+    <title>Bike Gallery</title>
     <style>
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
+            background-color: #f0f0f5;
             color: #333;
         }
 
         header {
-            background-color: #222;
+            background-color: #333;
             color: white;
             padding: 1rem 0;
             text-align: center;
@@ -23,12 +22,30 @@
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #222;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 20px;
             padding: 20px;
         }
@@ -74,7 +91,12 @@
 
         .gallery-item .overlay h3 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .content {
+            padding: 20px;
+            line-height: 1.6;
         }
 
         footer {
@@ -90,42 +112,77 @@
             font-size: 0.9rem;
         }
 
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Car Gallery</h1>
+        <h1>Bike Gallery</h1>
     </header>
 
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToBZHKZomJg6ceMvorAb1q8F11yXAC8-BMog&s" alt="Car 1">
-            <div class="overlay">
-                <h3>Sporty Coupe</h3>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <section id="home" class="content">
+        <h2>Welcome to Our Bike Gallery</h2>
+        <p>Discover a wide variety of bikes, from classic designs to the latest models. Explore our gallery and find the bike that suits your style.</p>
+        <a href="#gallery" class="button">View Gallery</a>
+    </section>
+
+    <section id="gallery">
+        <h2 style="text-align: center; padding: 20px 0;">Our Collection</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="https://th.bing.com/th/id/OIP.VSmBe-uZrA8FUdUHbjFKrQHaEt?w=293&h=186&c=7&r=0&o=5&pid=1.7" alt="Bike 1">
+                <div class="overlay">
+                    <h3>Road Bike</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://th.bing.com/th/id/OIP.wDtkFj8efpOZXn16h594jgHaFj?w=249&h=187&c=7&r=0&o=5&pid=1.7" alt="Bike 2">
+                <div class="overlay">
+                    <h3>Mountain Bike</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://th.bing.com/th/id/OIP.C9GYGtMsedR3L57GPnjkSQHaFj?w=243&h=183&c=7&r=0&o=5&pid=1.7" alt="Bike 3">
+                <div class="overlay">
+                    <h3>Vintage Cruiser</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://cimg0.ibsrv.net/ibimg/hgm/1920x1080-1/100/730/damon-hypersport-electric-motorcycle_100730756.jpg" alt="Bike 4">
+                <div class="overlay">
+                    <h3>Electric Bike</h3>
+                </div>
             </div>
         </div>
-        <div class="gallery-item">
-            <img src="https://freedesignfile.com/upload/2018/04/Beautiful-woman-with-luxury-car-Stock-Photo-04.jpg" alt="Car 2">
-            <div class="overlay">
-                <h3>Luxury Sedan</h3>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRobiaym9UDaM1-CssWlZmHnRm8GUSITsaUkQ&s" alt="Car 3">
-            <div class="overlay">
-                <h3>Classic Muscle</h3>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://images.drivespark.com/img/2012/10/09-range-rover-evoque-women.jpg" alt="Car 4">
-            <div class="overlay">
-                <h3>Modern SUV</h3>
-            </div>
-        </div>
-    </div>
+    </section>
+
+    <section id="about" class="content">
+        <h2>About Us</h2>
+        <p>Our mission is to bring together bike enthusiasts and showcase a wide range of bicycles. From professional racers to casual riders, we have something for everyone. Explore our gallery and experience the joy of cycling.</p>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Car Gallery. All Rights Reserved.</p>
+        <p>&copy; 2024 Bike Gallery. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
